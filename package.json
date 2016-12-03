@@ -1,0 +1,22 @@
+{
+  "name": "node-starter",
+  "version": "0.0.1",
+  "description": "node.js project boilerplate",
+  "main": "index.js",
+  "author": "rabinzon <ildarrazin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest __test__/",
+    "start": "nodemon ./src/index.js",
+    "lint": "eslint -c .eslintrc ./src/**/*.js",
+    "prepush": "npm run lint",
+    "init": "rm -rf .git && git init && git add . && git commit -m 'init'"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "jest": "^16.0.2"
+  },
+  "dependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
