@@ -1,11 +1,15 @@
 const redis = require('redis');
 const bunyan = require('bunyan');
+const process = require('process');
 
-const client = redis.createClient();
+const port = process.env.DB_PORT;
+const host = process.env.DB_HOST;
+
+const client = redis.createClient(port, host);
 const log = bunyan.createLogger({
 	name: 'bot',
 	streams: [{
-		path: './foo.log',
+		path: './db.log',
 	}]
 });
 
