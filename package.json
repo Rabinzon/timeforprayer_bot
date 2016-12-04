@@ -17,6 +17,7 @@
     "jest": "^16.0.2"
   },
   "dependencies": {
+    "bunyan": "^1.8.5",
     "isomorphic-fetch": "^2.2.1",
     "node-telegram-bot-api": "^0.24.0",
     "nodemon": "^1.11.0",
