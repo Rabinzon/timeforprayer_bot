@@ -1,0 +1,16 @@
+version: "2"
+services:
+  web:
+    env_file:
+      - .env
+    build: .
+    volumes:
+      - ./:/home
+    ports:
+      - "3022:3022"
+    links:
+      - redis
+  redis:
+      image: smebberson/alpine-redis
+      ports:
+        - "6379:6379"
